@@ -12,6 +12,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+  
   # This workflow contains a single job called "build"
   download:
     # The type of runner that the job will run on
@@ -26,6 +27,7 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
+          tag_name: test
           files: ${{ github.workspace }}
       - name: close-issues
         uses: actions-cool/issues-helper@v3
