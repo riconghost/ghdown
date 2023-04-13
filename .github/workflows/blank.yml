@@ -28,7 +28,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: test
-          files: ${{ github.workspace }}
+          files: /home/runner/work/ghdown/ghdown/*
       - name: close-issues
         uses: actions-cool/issues-helper@v3
         with:
