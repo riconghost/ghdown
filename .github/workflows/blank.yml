@@ -27,6 +27,10 @@ jobs:
           name: File
           path: ${{ github.workspace }}
           retention-days: 5
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ${{ github.workspace }}
       - name: close-issues
         uses: actions-cool/issues-helper@v3
         with:
