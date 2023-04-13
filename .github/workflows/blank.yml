@@ -21,12 +21,6 @@ jobs:
     steps:
       - name: Download
         run: aria2c "${{ github.event.issue.body }}"
-      - name: upload
-        uses: actions/upload-artifact@v3
-        with:
-          name: File
-          path: ${{ github.workspace }}
-          retention-days: 5
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
